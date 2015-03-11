@@ -1,27 +1,26 @@
-//changes
 $( document ).ready( function () {
 
-	var vid         = $( '#bgvid' );
+	var videoId         = $( '#bgvid' );
 	var pauseButton = $( 'button' );
 
 	function vidFade() {
-		vid.addClass( 'stopfade' );
+		videoId.addClass( 'stopfade' );
 	}
 
-	vid.on( 'ended', function() {
+	videoId.on( 'ended', function() {
 		// only functional if 'loop' is removed
-		vid[0].pause();
+		videoId[0].pause();
 		// to capture IE10
 		vidFade();
 	} );
 
 	pauseButton.click( function () {
-		vid.toggleClass( 'stopfade' );
-		if ( vid[0].paused ) {
-			vid[0].play();
+		videoId.toggleClass( 'stopfade' );
+		if ( videoId[0].paused ) {
+			videoId[0].play();
 			pauseButton.text( 'Pause' );
 		} else {
-			vid[0].pause();
+			videoId[0].pause();
 			pauseButton.text( 'Paused' );
 		}
 	})
