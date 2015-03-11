@@ -1,3 +1,4 @@
+//changes
 $( document ).ready( function () {
 
 	var vid         = $( '#bgvid' );
